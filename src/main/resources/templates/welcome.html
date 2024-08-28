@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script>
+
+        function readCookie(cookieName) {
+           alert($.cookie(cookieName))
+        }
+
+    </script>
+
+</head>
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Cookie Name</th>
+        <th scope="col">Cookie Value</th>
+        <th scope="col">HttpOnly</th>
+        <th scope="col">Read By Javascript</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+
+        <td>my-cookie</td>
+        <td>12345</td>
+        <td><b>No</b></td>
+        <td><button type="button" class="btn btn-primary"
+                    onclick="readCookie('my-cookie')">Read By Javascript</button></td>
+    </tr>
+
+    <tr>
+
+        <td>my-httponly-cookie</td>
+        <td>12345</td>
+        <td><b>Yes</b></td>
+        <td><button type="button" class="btn btn-primary"
+                    onclick="readCookie('my-httponly-cookie')">Read By Javascript</button></td>
+    </tr>
+
+    </tbody>
+</table>
+
+
+
+</body>
+</html>
